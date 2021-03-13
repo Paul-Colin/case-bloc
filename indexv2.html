@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+		<link href = "style.css" rel = "stylesheet" type = "text/css" >
+
+		<title>Case Bloc</title>
+	</head>
+	<body>
+		 <div id = "conteneur">
+				<div id = "canvas">
+				
+
+					<canvas id = "zonedessin" width = "800" height = "1000"> Merci de mettre à jour votre navigateur </canvas>
+				</div>
+				
+				<form>
+				
+				
+				
+				
+				<div id="info">
+					<div id="titre">
+						case bloc
+					</div>
+					<input type="text" id="f_text" value ="0:00" disabled >
+					<input type="text" id="pts" value ="0 pts" disabled >
+					<input type="text" id="f_vie" value ="vie : 3" disabled >
+					
+				
+					<div id="coeur">
+						<input type="text" id="f_coeur1" class="f_coeur" value ="" disabled >
+						<input type="text" id="f_coeur2" class="f_coeur" value ="" disabled >
+						<input type="text" id="f_coeur3" class="f_coeur" value ="" disabled >
+					</div>
+					<div id ="boutton">
+						<input type = "button" id = "bt_go" value = "lancer le jeu" onClick = "Debut_interval()" />
+						<input type = "button" id = "bt_stop" value = "recommencer" onClick = "stop()" />
+					</div>
+				</div>
+				
+				<div id="menu_parametre">
+				
+					<input type = "button" id = "bt_setting" value = " " onClick = "parametre()" />
+					<input type = "button" id = "bt_pause" value = " " onClick = "pause()" />
+					
+					<div id="parametre">
+					
+						Difficulte :	
+						<input type = "button" id="difficulte" value ="Normal" onClick = "niveau()" />
+				
+						<br>
+						temps :
+						<input type="text" id="temps" value ="infini" disabled >
+						<input type = "button" class="bt_controle_temps" value ="+10" onClick = "plus()" />
+						<input type = "button" class="bt_controle_temps" value ="-10" onClick = "moins()" />
+						<input type = "button" id="bt_infini" value ="infini" onClick = "infini()" />
+						
+						<br>
+						Nombre de vies :
+						<input type = "button" id="bt_vie1" class="bt_vie" value ="" onClick = "vie1()" />
+						<input type = "button" id="bt_vie2" class="bt_vie"value ="" onClick = "vie2()" />	
+						<input type = "button" id="bt_vie3" class="bt_vie" value ="" onClick = "vie3()" />
+						<br>
+						couleur des blocs:
+						<input type = "button" id="bt_bleu" class="bt_couleur" value ="" onClick = "bleu()" />
+						<input type = "button" id="bt_rouge" class="bt_couleur"value ="" onClick = "rouge()" />	
+						<input type = "button" id="bt_jaune" class="bt_couleur" value ="" onClick = "jaune()" />
+						<input type = "button" id="bt_vert" class="bt_couleur"value ="" onClick = "vert()" />	
+						<input type = "button" id="bt_rose" class="bt_couleur" value ="" onClick = "rose()" />
+			
+						<input type = "button" id="bt_regle" value ="regle" onClick = "regle()" />
+						<input type = "button" id="bt_credit" value ="credit" onClick = "credit()" />
+						<input type = "button" id="bt_valider" value ="Valider" onClick = "valider()" />
+						
+					</div>
+				</div>
+				<div id="autre">
+					<div id="regle">
+						Regle : vous devez aligner les blocs en evitant l'obstacle pour gagner des points.
+						Vous pouvez configurer la difficulte, le temps, le nombre de vies et la couleur des blocs.
+						<br>
+						<input type = "button" class="bt_retour" id="bt_retour1" value ="retour" onClick = "valider()" />
+					</div>
+					<div id="credit">
+						Cree par Paul Colin et Theo colin dans le cadre du projet de Terminal S specialite ISN.
+						<br>
+						<input type = "button" class="bt_retour" id="bt_retour2" value ="retour" onClick = "valider()" />
+					</div>
+					
+				</div>
+				<div id="ecran_perdu" >
+					<div id="annonce">
+					</div>
+					<br>
+				<input type = "button" id = "bt_stop2" value = "recommencer" onClick = "stop()" />
+				</div>
+			</div>
+			
+
+			<script  type = "text/javascript" src = "scriptv2.js">	</script>
+			<script  type = "text/javascript" src = "parametre.js">	</script>
+			
+			</form>
+	</body>
+</html>
